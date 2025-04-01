@@ -2,13 +2,13 @@
 
 function solveEquation(a, b, c) {
   let arr = [];
-  let d = b ** 2 - 4 * a * c;
+  const discriminant = b ** 2 - 4 * a * c;
   
-  if (d > 0) {
-    const x1 = (-b + Math.sqrt(d) ) / (2 * a);
-    const x2 = (-b - Math.sqrt(d) ) / (2 * a);
+  if (discriminant > 0) {
+    const x1 = (-b + Math.sqrt(discriminant) ) / (2 * a);
+    const x2 = (-b - Math.sqrt(discriminant) ) / (2 * a);
     arr.push(x1, x2);
-  } else if (d === 0) {
+  } else if (discriminant === 0) {
     const x = -b / (2 * a);
     arr.push(x);
   }
@@ -16,9 +16,9 @@ function solveEquation(a, b, c) {
 }
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  let perInMonth = percent / 100 / 12;
-  let creditBody = amount - contribution;
-  let paymentMonthly = creditBody * (perInMonth + (perInMonth / (((1 + perInMonth) ** countMonths) - 1)));
+  const perInMonth = percent / 100 / 12;
+  const creditBody = amount - contribution;
+  const paymentMonthly = creditBody * (perInMonth + (perInMonth / (((1 + perInMonth) ** countMonths) - 1)));
   let totalAmount = paymentMonthly * countMonths;
   totalAmount = Number(totalAmount.toFixed(2)); 
   return totalAmount;
