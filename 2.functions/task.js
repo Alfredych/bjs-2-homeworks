@@ -108,7 +108,7 @@ console.log(averageEvenElementsWorker(arr));
 // Задача 3
 //---------
 
-const arr = [
+arr = [
   [10, 10, 11, 20, 10], 
   [67, 10, 2, 39, 88], 
   [72, 75, 51, 87, 43], 
