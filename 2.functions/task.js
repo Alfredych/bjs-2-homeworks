@@ -38,10 +38,13 @@ console.log(result);
 arr = [25, 33, 44, 97, 62];
 
 function summElementsWorker(arr) {
-  if (arr.length === 0) return 0;
-    return arr.reduce((sum, elem) {
+  if (arr.length === 0) {
+    return 0;
+  } else {
+      return arr.reduce(function(sum, elem) {
         return sum + elem;
       }, 0);
+  }
 }
 
 console.log(summElementsWorker(arr));
