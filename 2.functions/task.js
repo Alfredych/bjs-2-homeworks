@@ -176,7 +176,7 @@ if (arr.length === 0) {
 
 function makeWork(arrOfArr, func) {
 let maxWorkerResult = -Infinity;
-for (const arr of arrOfArr) {
+for (arr of arrOfArr) {
   const currentResult = func(...arr);
   if (currentResult > maxWorkerResult) {
     maxWorkerResult = currentResult;
