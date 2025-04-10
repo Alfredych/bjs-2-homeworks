@@ -28,7 +28,7 @@ function getArrayParams(...arr) {
   };
 }
 
-const result = getArrayParams(...arr);
+const result = getArrayParams(arr);
 console.log(result);
 
 //---------------------------------------
@@ -126,7 +126,7 @@ for (arr of arrOfArr) {
 return maxWorkerResult;
 }
 
-console.log(makeWork(arr, summElementsWorker(arr)));
-console.log(makeWork(arr, differenceMaxMinWorker(arr)));
-console.log(makeWork(arr, differenceEvenOddWorker(arr)));
-console.log(makeWork(arr, averageEvenElementsWorker(arr)));
+console.log(makeWork(arr, summElementsWorker));
+console.log(makeWork(arr, differenceMaxMinWorker));
+console.log(makeWork(arr, differenceEvenOddWorker));
+console.log(makeWork(arr, averageEvenElementsWorker));
