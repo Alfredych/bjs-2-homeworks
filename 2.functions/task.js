@@ -35,10 +35,10 @@ console.log(result);
 // Задача 2
 //---------
 
-arr = [25, 33, 44, 97, 62];
+arr = [10, 10, 11, 20, 10];
 
 function summElementsWorker(arr) {
-  if (!arr.length) {
+  if (arr.length == 0) {
     return 0;
   } else {
       return arr.reduce(function(sum, elem) {
@@ -67,6 +67,8 @@ function differenceMaxMinWorker(arr) {
 
 console.log(differenceMaxMinWorker(arr));
 
+arr = [94, 51, 57, 41, 47, 66, 58, 10, 38, 17];
+
 function differenceEvenOddWorker(arr) {
   if (arr.length === 0) {
     return 0;
@@ -85,6 +87,8 @@ function differenceEvenOddWorker(arr) {
 }
 
 console.log(differenceEvenOddWorker(arr));
+
+arr = [15, 97, 85, 64, 67, 10, 69, 40, 15, 35];
 
 function averageEvenElementsWorker(arr) {
   if (arr.length === 0) {
