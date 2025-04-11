@@ -38,7 +38,7 @@ console.log(result);
 arr = [25, 33, 44, 97, 62];
 
 function summElementsWorker(arr) {
-  if (arr.length === 0) {
+  if (!arr.length) {
     return 0;
   } else {
       return arr.reduce(function(sum, elem) {
