@@ -28,7 +28,7 @@ function getArrayParams(...arr) {
   };
 }
 
-const result = getArrayParams(arr);
+const result = getArrayParams(...arr);
 console.log(result);
 
 //---------------------------------------
@@ -116,16 +116,14 @@ arr = [
 ];
 
 function makeWork(arrOfArr, func) {
-let maxWorkerResult = -Infinity;
-min = Infinity;
-max = -Infinity;
-for (arr of arrOfArr) {
-  const currentResult = func(...arr);
-  if (currentResult > maxWorkerResult) {
-    maxWorkerResult = currentResult;
+  let maxWorkerResult = -Infinity;
+  for (subArr of arrOfArr) {
+    const currentResult = func(subArr);
+    if (currentResult > maxWorkerResult) {
+      maxWorkerResult = currentResult;
+    }
   }
-}
-return maxWorkerResult;
+  return maxWorkerResult;
 }
 
 console.log(makeWork(arr, summElementsWorker));
