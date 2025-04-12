@@ -30,9 +30,9 @@ function getArrayParams(...arr) {
   };
 }
 
-console.log(getArrayParams(...arr1));
-console.log(getArrayParams(...arr2));
-console.log(getArrayParams(...arr3));
+console.log(getArrayParams(arr1));
+console.log(getArrayParams(arr2));
+console.log(getArrayParams(arr3));
 
 //---------------------------------------
 // Задача 2
@@ -40,7 +40,7 @@ console.log(getArrayParams(...arr3));
 
 let arr4 = [10, 10, 11, 20, 10];
 
-function summElementsWorker(arr) {
+function summElementsWorker(...arr) {
   if (arr.length == 0) {
     return 0;
   } else {
@@ -52,7 +52,7 @@ function summElementsWorker(arr) {
 
 console.log(summElementsWorker(arr4));
 
-function differenceMaxMinWorker(arr) {
+function differenceMaxMinWorker(...arr) {
   if (arr.length == 0) {
     return 0;
   } else {
@@ -74,7 +74,7 @@ let arr5 = [94, 51, 57, 41, 47, 66, 58, 10, 38, 17];
 let arr6 = [15, 97, 85, 64, 67, 10, 69, 40, 15, 35];
 let arr7 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-function differenceEvenOddWorker(arr) {
+function differenceEvenOddWorker(...arr) {
   if (arr.length == 0) {
     return 0;
   } else {
@@ -95,7 +95,7 @@ console.log(differenceEvenOddWorker(arr7));
 console.log(differenceEvenOddWorker(arr5));
 console.log(differenceEvenOddWorker(arr6));
 
-function averageEvenElementsWorker(arr) {
+function averageEvenElementsWorker(...arr) {
   if (arr.length == 0) {
     return 0;
   } else {
@@ -128,7 +128,7 @@ let arr8 = [
 function makeWork(arrOfArr, func) {
   let maxWorkerResult = -Infinity;
   for (subArr of arrOfArr) {
-    const currentResult = func(subArr);
+    const currentResult = func(...subArr);
     if (currentResult > maxWorkerResult) {
       maxWorkerResult = currentResult;
     }
