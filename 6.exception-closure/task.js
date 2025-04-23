@@ -28,20 +28,20 @@ class Triangle {
     this.a = a;
     this.b = b;
     this.c = c;
-    this._perimeter = this.a + this.b + this.c;    
-    const pp = this._perimeter / 2; // полупериметр для формулы Герона
-    this._area = Number((Math.sqrt(pp * (pp - this.a) * (pp - this.b) * (pp - this.c))).toFixed(3));
-    if (this.a + this.b <= this.c || this.a + this.c <= this.b || this.b + this.c <= this.a) {
+    this._perimeter;
+    this._area;
+    if (a + b <= c || a + c <= b || b + c <= a) {
       throw new Error("Треугольник с такими сторонами не существует");
     }
   }
   
   get perimeter() {
-    return this._perimeter;
+    return this._perimeter = this.a + this.b + this.c;
   }
 
-  get area() {
-    return this._area;
+  get area() {    
+    const pp = (this.a + this.b + this.c) / 2; // полупериметр для формулы Герона
+    return this._area = Number((Math.sqrt(pp * (pp - this.a) * (pp - this.b) * (pp - this.c))).toFixed(3));
   }
 }
 
